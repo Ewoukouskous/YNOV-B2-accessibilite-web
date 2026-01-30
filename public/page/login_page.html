@@ -57,7 +57,8 @@
                             type="button"
                             class="input-group-text"
                             id="togglePassword"
-                            title="Show password"
+                            title="Afficher mot de passe"
+                            aria-label="Afficher mot de passe"
                     >
                         <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
                              viewBox="0 0 24 24">
@@ -100,10 +101,12 @@
         // Change the icon and title accordingly
         if (type === "text") {
             togglePassword.innerHTML = eyeClosed;
-            togglePassword.setAttribute("title", "Hide password");
+            togglePassword.setAttribute("title", "Masquer mot de passe");
+            togglePassword.setAttribute("aria-label", "Masquer mot de passe");
         } else {
             togglePassword.innerHTML = eyeOpen;
-            togglePassword.setAttribute("title", "Show password");
+            togglePassword.setAttribute("title", "Afficher mot de passe");
+            togglePassword.setAttribute("aria-label", "Afficher mot de passe");
         }
     });
 </script>
