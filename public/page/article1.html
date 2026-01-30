@@ -48,13 +48,13 @@
         </div>
     </header>
 
-    <main class="mt-auto mx-3">
+    <main class="mt-auto mx-3" tabindex="-1">
         <!-- Conteneur principal (l'article) -->
-        <div class="container" style="margin-top: 15vh; margin-bottom: 10vh;">
+        <article class="container" style="margin-top: 15vh; margin-bottom: 10vh;" aria-labelledby="title-article">            
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <!-- Titre de l'article -->
-                    <h1 class="display-4 fw-bold mb-4">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h1>
+                    <h1 id="title-article" class="display-4 fw-bold mb-4">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h1>
                     <!-- Phrase d'introduction de l'article -->
                     <div class="article-text mb-5">
                         <img class="float-end ms-5 me-2 rounded shadow-sm border border-secondary" src="../images/article1/article1_illustration_image.jpg" alt="Image d'illustration de l'iris d'un oeil" style="max-width: 300px; width: 100%; height: auto;">
@@ -135,7 +135,8 @@
                     </div>
 
                     <!-- Conteneur principal de la section commentaire -->
-                    <div class="mt-5 mb-5" id="commentaires">
+                    <section class="mt-5 mb-5" id="commentaires" aria-labelledby="title-comments">
+                        <span id="title-comments" class="visually-hidden">Section commentaire</span>
 
                         <h3 class="fw-bold mb-4 border-bottom border-dark pb-2">Commentaires (3)</h3>
 
@@ -191,11 +192,11 @@
                             </div>
 
                         </div>
-                    </div>
+                    </section>
 
                 </div>
             </div>
-        </div>
+        </article>
     </main>
 
     <footer class="mt-auto">
