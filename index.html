@@ -10,11 +10,11 @@
 <body class="d-flex flex-column min-vh-100">
 
 <header>
-    <nav class="navbar navbar-expand-lg text-bg-dark p-3 rounded-bottom-3 overflow-hidden fixed-top" data-bs-theme="dark">
+    <div class="navbar navbar-expand-lg text-bg-dark p-3 rounded-bottom-3 overflow-hidden fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <!--Partie "Branding", affichage du logo et du nom du site-->
             <a class="navbar-brand ms-3" href="index.html">
-                <img class="me-3" src="logo.png" alt="Logo Site" aria-hidden="true" height="40">
+                <img class="me-3" src="logo.png" aria-hidden="true" height="40">
                 Complot Accessible
             </a>
 
@@ -26,7 +26,7 @@
             </button>
 
             <!-- Liens de navigation (contenu) -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <nav class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white link-danger" href="index.html">Accueil</a>
@@ -35,138 +35,155 @@
                         <a class="nav-link text-white link-danger" href="public/page/login_page.html">Connexion</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </div>
 </header>
 
-<main class="mt-auto mx-3">
+<main class="mt-auto mx-3" tabindex="-1">
 <div class="container-fluid" style="margin-top: 15vh; margin-bottom: 10vh;">
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-11 col-xl-10">
+        <section class="col-12 col-lg-11 col-xl-10">
 
             <!-- Article 1 : Le Daltonisme -->
-            <a href="public/page/article1.html" class="text-decoration-none">
-                <div class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <div class="row g-0">
-                        <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
-                            <img src="public/images/article1/article1_illustration_image.jpg" alt="Image d'illustration de l'iris d'un oeil" style="width: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-md-9">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
+                                <a href="public/page/article1.html" class="text-decoration-none">
+                                    <img src="public/images/article1/article1_illustration_image.jpg" style="width: 100%; object-fit: cover;">
+                                </a>
+                            </div>
+                        <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h5>
-                                <p class="card-text mt-2 text-dark">
-                                    Les tests d'Ishihara ne mesurent pas votre acuité visuelle, ils mesurent votre degré de soumission
-                                    au consensus colorimétrique établi par l'OMS en 1954.
-                                </p>
-                                <p class="card-text text-md">💬 3 commentaires</p>
+                                <a href="public/page/article1.html" class="text-decoration-none">
+                                    <h5 class="card-title text-dark fw-bold">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h5>
+                                    <p class="card-text mt-2 text-dark">
+                                        Les tests d'Ishihara ne mesurent pas votre acuité visuelle, ils mesurent votre degré de soumission
+                                        au consensus colorimétrique établi par l'OMS en 1954.
+                                    </p>
+                                </a>
+                                <a href="public/page/article1.html#commentaires" class="card-text text-md pt-3 text-decoration-none">💬 3 commentaires</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </article>
 
             <!-- Article 2 : Les lecteurs d'écran -->
-            <a href="public/page/article2.html" class="text-decoration-none">
-                <div class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
-                            <img src="public/images/article2/article2_illustration_image.png" alt="Image d'illustration contenant des balises HTML 'ARIA'" style="width: 100%; object-fit: cover;">
+                            <a href="public/page/article2.html" class="text-decoration-none">
+                                <img src="public/images/article2/article2_illustration_image.png" style="width: 100%; object-fit: cover;">
+                            </a>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold">Les lecteurs d'écran ne lisent pas, ils transmettent vos pensées à la NSA</h5>
-                                <p class="card-text mt-2 text-dark">
-                                    Pourquoi une voix synthétique aurait-elle besoin de lire votre écran à haute voix alors que vous êtes seul dans la pièce ?
-                                </p>
-                                <p class="card-text text-md">💬 3 commentaires</p>
+                                <a href="public/page/article2.html" class="text-decoration-none">
+                                    <h5 class="card-title text-dark fw-bold">Les lecteurs d'écran ne lisent pas, ils transmettent vos pensées à la NSA</h5>
+                                    <p class="card-text mt-2 text-dark">
+                                        Pourquoi une voix synthétique aurait-elle besoin de lire votre écran à haute voix alors que vous êtes seul dans la pièce ?
+                                    </p>
+                                </a>
+
+                                <a href="public/page/article2.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </article>
 
             <!-- Article 3 : Les pigeons -->
-            <a href="public/page/article3.html" class="text-decoration-none">
-                <div class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
-                            <img src="public/images/article3/article3_illustration_image.jpg" alt="Schéma d'illustration montrant les composants électronique présent dans un pigeon drone" style="width: 100%; object-fit: cover;">
+                            <a href="public/page/article3.html" class="text-decoration-none">
+                                <img src="public/images/article3/article3_illustration_image.jpg" style="width: 100%; object-fit: cover;">
+                            </a>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold">Les pigeons : Des drones de surveillance à rechargement inductif</h5>
-                                <p class="card-text mt-2 text-dark">
-                                    Si les oiseaux sont réels, pourquoi on ne les voyait pas pendant le confinement ?
-                                </p>
-                                <p class="card-text text-md">💬 3 commentaires</p>
+                                <a href="public/page/article3.html" class="text-decoration-none">
+                                    <h5 class="card-title text-dark fw-bold">Les pigeons : Des drones de surveillance à rechargement inductif</h5>
+                                    <p class="card-text mt-2 text-dark">
+                                        Si les oiseaux sont réels, pourquoi on ne les voyait pas pendant le confinement ?
+                                    </p>
+                                </a>
+
+                                <a href="public/page/article3.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </article>
 
             <!-- Article 4 : L'Australie -->
-            <a href="public/page/article4.html" class="text-decoration-none">
-                <div class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
-                            <img src="public/images/article4/article4_illustration_image.png" alt="Carte du monde 'réelle' montrant un océan vide à la place de l'Australie" style="width: 100%; object-fit: cover;">
+                            <a href="public/page/article4.html" class="text-decoration-none">
+                                <img src="public/images/article4/article4_illustration_image.png" style="width: 100%; object-fit: cover;">
+                            </a>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold">L'Australie : Le mythe de la "Terre du Bas" et le danger de la chute</h5>
-                                <p class="card-text mt-2 text-dark">
-                                    Avez-vous déjà essayé de coller une figurine sous une table ? Elle tombe. Pourtant, on veut nous faire croire que tout un continent tient à l'envers.
-                                </p>
-                                <p class="card-text text-md">💬 3 commentaires</p>
+                                <a href="public/page/article4.html" class="text-decoration-none">
+                                    <h5 class="card-title text-dark fw-bold">L'Australie : Le mythe de la "Terre du Bas" et le danger de la chute</h5>
+                                    <p class="card-text mt-2 text-dark">
+                                        Avez-vous déjà essayé de coller une figurine sous une table ? Elle tombe. Pourtant, on veut nous faire croire que tout un continent tient à l'envers.
+                                    </p>
+                                </a>
+
+                                <a href="public/page/article4.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </article>
 
             <!-- Article 5 : Le Sommeil -->
-            <a href="public/page/article5.html" class="text-decoration-none">
-                <div class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
-                            <img src="public/images/article5/article5_illustration_image.png" alt="Schéma montrant un homme au lit alors qu'un signal de chauve-souris brille à la fenêtre" style="width: 100%; object-fit: cover;">
+                            <a href="public/page/article5.html" class="text-decoration-none">
+                                <img src="public/images/article5/article5_illustration_image.png" style="width: 100%; object-fit: cover;">
+                            </a>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold">Le Sommeil : Un couvre-feu imposé pour empêcher l'émergence de Batman</h5>
-                                <p class="card-text mt-2 text-dark">
-                                    On nous dit que 8 heures de repos sont nécessaires. Mais reposez-vous la question : à qui profite votre inconscience ?
-                                </p>
-                                <p class="card-text text-md">💬 3 commentaires</p>
+                                <a href="public/page/article5.html" class="text-decoration-none">
+                                    <h5 class="card-title text-dark fw-bold">Le Sommeil : Un couvre-feu imposé pour empêcher l'émergence de Batman</h5>
+                                    <p class="card-text mt-2 text-dark">
+                                        On nous dit que 8 heures de repos sont nécessaires. Mais reposez-vous la question : à qui profite votre inconscience ?
+                                    </p>
+                                </a>
+
+                                <a href="public/page/article5.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </article>
 
             <!-- Article 6 : TDAH et Autisme -->
-            <a href="public/page/article6.html" class="text-decoration-none">
-                <div class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
-                            <img src="public/images/article6/article6_illustration_image.png" alt="Visualisation d'un cerveau émettant des ondes violettes et des lignes de code" style="width: 100%; object-fit: cover;">
+                            <a href="public/page/article6.html" class="text-decoration-none">
+                                <img src="public/images/article6/article6_illustration_image.png"   style="width: 100%; object-fit: cover;">
+                            </a>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold">TDAH et Autisme : Les nouveaux processeurs quantiques de l'Humanité</h5>
-                                <p class="card-text mt-2 text-dark">
-                                    On vous dit qu'ils sont "distraits" ou "dans leur monde". La vérité ? Leur cerveau tourne en Overclocking permanent.
-                                </p>
-                                <p class="card-text text-md">💬 3 commentaires</p>
+                                <a href="public/page/article6.html" class="text-decoration-none">
+                                    <h5 class="card-title text-dark fw-bold">TDAH et Autisme : Les nouveaux processeurs quantiques de l'Humanité</h5>
+                                    <p class="card-text mt-2 text-dark">
+                                        On vous dit qu'ils sont "distraits" ou "dans leur monde". La vérité ? Leur cerveau tourne en Overclocking permanent.
+                                    </p>
+                                </a>
+
+                                <a href="public/page/article6.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </article>
 
-        </div>
+        </section>
     </div>
 </div>
 </main>
