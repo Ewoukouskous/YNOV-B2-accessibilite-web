@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Complot Accessible - Accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .article-card {
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .article-card:hover {
+            transform: scale(1.02);
+        }
+
+        :focus {
+            outline: none;
+        }
+        :focus-visible {
+            outline: 2px solid #bb2d3b !important;
+            outline-offset: 2px;
+        }
+
+    </style>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
 <header>
     <div class="navbar navbar-expand-lg text-bg-dark p-3 rounded-bottom-3 overflow-hidden fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <!--Partie "Branding", affichage du logo et du nom du site-->
-            <a class="navbar-brand ms-3" href="index.html">
+            <a class="navbar-brand ms-3 d-flex align-items-center" href="index.html" title="Aller à la page d'accueil">
                 <img class="me-3" src="logo.png" aria-hidden="true" height="40">
-                Complot Accessible
+                <h1 class="fs-3 mb-0">Complot Accessible</h1>
             </a>
 
             <!--Bouton Hamburger pour les petits écrans-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-label="Toggle navigation"
+                    title="Bouton hamburger, ouvrir le menu de navigation">
                 <span class="navbar-toggler-icon text-white"></span>
             </button>
 
@@ -29,10 +52,10 @@
             <nav class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white link-danger" href="index.html">Accueil</a>
+                        <a class="nav-link text-white link-danger" href="index.html" title="Aller à la page d'accueil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white link-danger" href="public/page/login_page.html">Connexion</a>
+                        <a class="nav-link text-white link-danger" href="public/page/login_page.html" title="Aller à la page de connexion">Connexion</a>
                     </li>
                 </ul>
             </nav>
@@ -46,7 +69,7 @@
         <section class="col-12 col-lg-11 col-xl-10">
 
             <!-- Article 1 : Le Daltonisme -->
-                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm article-card" id="article1">
                     <div class="row g-0">
                             <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                                 <a href="public/page/article1.html" class="text-decoration-none">
@@ -55,21 +78,22 @@
                             </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <a href="public/page/article1.html" class="text-decoration-none">
-                                    <h5 class="card-title text-dark fw-bold">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h5>
+                                <a href="public/page/article1.html" class="text-decoration-none" title="Lire l'article sur le daltonisme">
+                                    <h2 class="fs-4 card-title text-dark fw-bold">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h2>
                                     <p class="card-text mt-2 text-dark">
                                         Les tests d'Ishihara ne mesurent pas votre acuité visuelle, ils mesurent votre degré de soumission
                                         au consensus colorimétrique établi par l'OMS en 1954.
                                     </p>
                                 </a>
-                                <a href="public/page/article1.html#commentaires" class="card-text text-md pt-3 text-decoration-none">💬 3 commentaires</a>
+                                <a href="public/page/article1.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur le daltonisme">💬 3 commentaires</a>
+                                <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-15">15 janvier 2026</time></small></p>
                             </div>
                         </div>
                     </div>
                 </article>
 
             <!-- Article 2 : Les lecteurs d'écran -->
-                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm article-card" id="article2">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article2.html" class="text-decoration-none">
@@ -78,21 +102,22 @@
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <a href="public/page/article2.html" class="text-decoration-none">
-                                    <h5 class="card-title text-dark fw-bold">Les lecteurs d'écran ne lisent pas, ils transmettent vos pensées à la NSA</h5>
+                                <a href="public/page/article2.html" class="text-decoration-none" title="Lire l'article sur les lecteurs d'écran">
+                                    <h2 class="fs-4 card-title text-dark fw-bold">Les lecteurs d'écran ne lisent pas, ils transmettent vos pensées à la NSA</h2>
                                     <p class="card-text mt-2 text-dark">
                                         Pourquoi une voix synthétique aurait-elle besoin de lire votre écran à haute voix alors que vous êtes seul dans la pièce ?
                                     </p>
                                 </a>
 
-                                <a href="public/page/article2.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
+                                <a href="public/page/article2.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur les lecteurs d'écran">💬 3 commentaires</a>
+                                <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-18">18 janvier 2026</time></small></p>
                             </div>
                         </div>
                     </div>
                 </article>
 
             <!-- Article 3 : Les pigeons -->
-                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm article-card" id="article3">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article3.html" class="text-decoration-none">
@@ -101,21 +126,22 @@
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <a href="public/page/article3.html" class="text-decoration-none">
-                                    <h5 class="card-title text-dark fw-bold">Les pigeons : Des drones de surveillance à rechargement inductif</h5>
+                                <a href="public/page/article3.html" class="text-decoration-none" title="Lire l'article sur les pigeons">
+                                    <h2 class="fs-4 card-title text-dark fw-bold">Les pigeons : Des drones de surveillance à rechargement inductif</h2>
                                     <p class="card-text mt-2 text-dark">
                                         Si les oiseaux sont réels, pourquoi on ne les voyait pas pendant le confinement ?
                                     </p>
                                 </a>
 
-                                <a href="public/page/article3.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
+                                <a href="public/page/article3.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur les pigeons">💬 3 commentaires</a>
+                                <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-20">20 janvier 2026</time></small></p>
                             </div>
                         </div>
                     </div>
                 </article>
 
             <!-- Article 4 : L'Australie -->
-                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm article-card" id="article4">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article4.html" class="text-decoration-none">
@@ -124,21 +150,22 @@
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <a href="public/page/article4.html" class="text-decoration-none">
-                                    <h5 class="card-title text-dark fw-bold">L'Australie : Le mythe de la "Terre du Bas" et le danger de la chute</h5>
+                                <a href="public/page/article4.html" class="text-decoration-none" title="Lire l'article sur l'Australie">
+                                    <h2 class="fs-4 card-title text-dark fw-bold">L'Australie : Le mythe de la "Terre du Bas" et le danger de la chute</h2>
                                     <p class="card-text mt-2 text-dark">
                                         Avez-vous déjà essayé de coller une figurine sous une table ? Elle tombe. Pourtant, on veut nous faire croire que tout un continent tient à l'envers.
                                     </p>
                                 </a>
 
-                                <a href="public/page/article4.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
+                                <a href="public/page/article4.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur l'Australie">💬 3 commentaires</a>
+                                <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-22">22 janvier 2026</time></small></p>
                             </div>
                         </div>
                     </div>
                 </article>
 
             <!-- Article 5 : Le Sommeil -->
-                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm article-card" id="article5">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article5.html" class="text-decoration-none">
@@ -147,21 +174,22 @@
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <a href="public/page/article5.html" class="text-decoration-none">
-                                    <h5 class="card-title text-dark fw-bold">Le Sommeil : Un couvre-feu imposé pour empêcher l'émergence de Batman</h5>
+                                <a href="public/page/article5.html" class="text-decoration-none" title="Lire l'article sur le sommeil">
+                                    <h2 class="fs-4 card-title text-dark fw-bold">Le Sommeil : Un couvre-feu imposé pour empêcher l'émergence de Batman</h2>
                                     <p class="card-text mt-2 text-dark">
                                         On nous dit que 8 heures de repos sont nécessaires. Mais reposez-vous la question : à qui profite votre inconscience ?
                                     </p>
                                 </a>
 
-                                <a href="public/page/article5.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
+                                <a href="public/page/article5.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur le sommeil">💬 3 commentaires</a>
+                                <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-25">25 janvier 2026</time></small></p>
                             </div>
                         </div>
                     </div>
                 </article>
 
             <!-- Article 6 : TDAH et Autisme -->
-                <article class="card border-dark mb-4 shadow-sm" style="width: 100%; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                <article class="card border-dark mb-4 shadow-sm article-card" id="article6">
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article6.html" class="text-decoration-none">
@@ -170,14 +198,15 @@
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
-                                <a href="public/page/article6.html" class="text-decoration-none">
-                                    <h5 class="card-title text-dark fw-bold">TDAH et Autisme : Les nouveaux processeurs quantiques de l'Humanité</h5>
+                                <a href="public/page/article6.html" class="text-decoration-none" title="Lire l'article sur le TDAH et l'autisme">
+                                    <h2 class="fs-4 card-title text-dark fw-bold">TDAH et Autisme : Les nouveaux processeurs quantiques de l'Humanité</h2>
                                     <p class="card-text mt-2 text-dark">
                                         On vous dit qu'ils sont "distraits" ou "dans leur monde". La vérité ? Leur cerveau tourne en Overclocking permanent.
                                     </p>
                                 </a>
 
-                                <a href="public/page/article6.html#commentaires" class="card-text text-md text-decoration-none">💬 3 commentaires</a>
+                                <a href="public/page/article6.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'articles sur le TDAH">💬 3 commentaires</a>
+                                <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-28">28 janvier 2026</time></small></p>
                             </div>
                         </div>
                     </div>
