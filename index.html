@@ -8,6 +8,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
+        /* Liens d'accès rapide pour l'accessibilité */
+        .skip-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            padding: 10px 20px;
+            background-color: #212529;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 5px 5px;
+            z-index: 10000;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+            top: 10px;
+            outline: 3px solid #ffc107;
+            outline-offset: 2px;
+        }
+
         .article-card {
             width: 100%;
             cursor: pointer;
@@ -31,12 +60,19 @@
 
 <body class="d-flex flex-column min-vh-100">
 
+<!-- Menu d'accès rapide pour l'accessibilité -->
+<nav class="skip-links" aria-label="Menu d'accès rapide">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#navbarNav" class="skip-link">Aller à la navigation</a>
+    <a href="#article1" class="skip-link">Aller au premier article</a>
+</nav>
+
 <header>
     <div class="navbar navbar-expand-lg text-bg-dark p-3 rounded-bottom-3 overflow-hidden fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <!--Partie "Branding", affichage du logo et du nom du site-->
             <a class="navbar-brand ms-3 d-flex align-items-center" href="index.html" title="Aller à la page d'accueil">
-                <img class="me-3" src="logo.png" aria-hidden="true" height="40">
+                <img class="me-3" src="logo.png" aria-hidden="true" height="40" alt="">
                 <h1 class="fs-3 mb-0">Complot Accessible</h1>
             </a>
 
@@ -52,10 +88,10 @@
             <nav class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white link-danger" href="index.html" title="Aller à la page d'accueil">Accueil</a>
+                        <a class="nav-link text-white link-danger" href="index.html" title="Aller à la page d'accueil" aria-label="Aller à la page d'acceuil" aria-current="page">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white link-danger" href="public/page/login_page.html" title="Aller à la page de connexion">Connexion</a>
+                        <a class="nav-link text-white link-danger" href="public/page/login_page.html" title="Aller à la page de connexion" aria-label="Aller à la page de connexion">Connexion</a>
                     </li>
                 </ul>
             </nav>
@@ -63,29 +99,31 @@
     </div>
 </header>
 
-<main class="mt-auto mx-3" tabindex="-1">
+<main class="mt-auto mx-3" tabindex="-1" id="main-content">
 <div class="container-fluid" style="margin-top: 15vh; margin-bottom: 10vh;">
     <div class="row justify-content-center">
         <section class="col-12 col-lg-11 col-xl-10">
+
+            <h2 class="card-title text-dark fw-bold pb-3">Derniers articles publiés</h2>
 
             <!-- Article 1 : Le Daltonisme -->
                 <article class="card border-dark mb-4 shadow-sm article-card" id="article1">
                     <div class="row g-0">
                             <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                                 <a href="public/page/article1.html" class="text-decoration-none">
-                                    <img src="public/images/article1/article1_illustration_image.jpg" style="width: 100%; object-fit: cover;">
+                                    <img src="public/images/article1/article1_illustration_image.jpg" style="width: 100%; object-fit: cover;" alt="">
                                 </a>
                             </div>
                         <div class="col-md-9 d-flex align-items-center">
                             <div class="card-body">
                                 <a href="public/page/article1.html" class="text-decoration-none" title="Lire l'article sur le daltonisme">
-                                    <h2 class="fs-4 card-title text-dark fw-bold">Le "Daltonisme" : Une pathologisation par le l'industrie optico-medicale</h2>
+                                    <h2 class="fs-4 card-title text-dark fw-bold">Le "Daltonisme" : Une pathologisation par l'industrie optico-medicale</h2>
                                     <p class="card-text mt-2 text-dark">
                                         Les tests d'Ishihara ne mesurent pas votre acuité visuelle, ils mesurent votre degré de soumission
                                         au consensus colorimétrique établi par l'OMS en 1954.
                                     </p>
                                 </a>
-                                <a href="public/page/article1.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur le daltonisme">💬 3 commentaires</a>
+                                <a href="public/page/article1.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur le daltonisme">3 commentaires</a>
                                 <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-15">15 janvier 2026</time></small></p>
                             </div>
                         </div>
@@ -97,7 +135,7 @@
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article2.html" class="text-decoration-none">
-                                <img src="public/images/article2/article2_illustration_image.png" style="width: 100%; object-fit: cover;">
+                                <img src="public/images/article2/article2_illustration_image.png" style="width: 100%; object-fit: cover;" alt="">
                             </a>
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
@@ -109,7 +147,7 @@
                                     </p>
                                 </a>
 
-                                <a href="public/page/article2.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur les lecteurs d'écran">💬 3 commentaires</a>
+                                <a href="public/page/article2.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur les lecteurs d'écran">3 commentaires</a>
                                 <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-18">18 janvier 2026</time></small></p>
                             </div>
                         </div>
@@ -121,7 +159,7 @@
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article3.html" class="text-decoration-none">
-                                <img src="public/images/article3/article3_illustration_image.jpg" style="width: 100%; object-fit: cover;">
+                                <img src="public/images/article3/article3_illustration_image.jpg" style="width: 100%; object-fit: cover;" alt="">
                             </a>
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
@@ -133,7 +171,7 @@
                                     </p>
                                 </a>
 
-                                <a href="public/page/article3.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur les pigeons">💬 3 commentaires</a>
+                                <a href="public/page/article3.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur les pigeons">3 commentaires</a>
                                 <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-20">20 janvier 2026</time></small></p>
                             </div>
                         </div>
@@ -145,7 +183,7 @@
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article4.html" class="text-decoration-none">
-                                <img src="public/images/article4/article4_illustration_image.png" style="width: 100%; object-fit: cover;">
+                                <img src="public/images/article4/article4_illustration_image.png" style="width: 100%; object-fit: cover;" alt="">
                             </a>
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
@@ -157,7 +195,7 @@
                                     </p>
                                 </a>
 
-                                <a href="public/page/article4.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur l'Australie">💬 3 commentaires</a>
+                                <a href="public/page/article4.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur l'Australie">3 commentaires</a>
                                 <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-22">22 janvier 2026</time></small></p>
                             </div>
                         </div>
@@ -169,7 +207,7 @@
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article5.html" class="text-decoration-none">
-                                <img src="public/images/article5/article5_illustration_image.png" style="width: 100%; object-fit: cover;">
+                                <img src="public/images/article5/article5_illustration_image.png" style="width: 100%; object-fit: cover;" alt="">
                             </a>
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
@@ -181,7 +219,7 @@
                                     </p>
                                 </a>
 
-                                <a href="public/page/article5.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur le sommeil">💬 3 commentaires</a>
+                                <a href="public/page/article5.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'article sur le sommeil">3 commentaires</a>
                                 <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-25">25 janvier 2026</time></small></p>
                             </div>
                         </div>
@@ -193,7 +231,7 @@
                     <div class="row g-0">
                         <div class="col-md-3 d-flex align-items-center justify-content-center bg-light rounded-start">
                             <a href="public/page/article6.html" class="text-decoration-none">
-                                <img src="public/images/article6/article6_illustration_image.png"   style="width: 100%; object-fit: cover;">
+                                <img src="public/images/article6/article6_illustration_image.png"   style="width: 100%; object-fit: cover;" alt="">
                             </a>
                         </div>
                         <div class="col-md-9 d-flex align-items-center">
@@ -205,7 +243,7 @@
                                     </p>
                                 </a>
 
-                                <a href="public/page/article6.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'articles sur le TDAH">💬 3 commentaires</a>
+                                <a href="public/page/article6.html#commentaires" class="card-text text-md text-decoration-none" title="Aller sur les commentaires de l'articles sur le TDAH">3 commentaires</a>
                                 <p class="card-text mt-2"><small class="text-muted">Publié le <time datetime="2026-01-28">28 janvier 2026</time></small></p>
                             </div>
                         </div>
