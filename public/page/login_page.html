@@ -104,12 +104,12 @@
             togglePassword.innerHTML = eyeClosed;
             togglePassword.setAttribute("title", "Masquer mot de passe");
             togglePassword.setAttribute("aria-label", "Masquer mot de passe");
-            togglePassword.setAttribute("aria-pressed", "true");
+            togglePassword.setAttribute("aria-pressed", true);
         } else {
             togglePassword.innerHTML = eyeOpen;
             togglePassword.setAttribute("title", "Afficher mot de passe");
             togglePassword.setAttribute("aria-label", "Afficher mot de passe");
-            togglePassword.setAttribute("aria-pressed", "false");
+            togglePassword.setAttribute("aria-pressed", false);
         }
     });
 </script>
