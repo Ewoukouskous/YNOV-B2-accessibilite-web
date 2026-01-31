@@ -80,10 +80,12 @@
                     </div>
 
                     <div class="card border-dark shadow-sm rounded-4 overflow-hidden mb-5">
+                <!-- Usage de longdesc pour décrire l'image, (compatible avec peut de navigateur mais vu comme bonne pratique dans le cours 'day2') -->
                         <img class="img-fluid" src="../images/article2/article2_magnifier_aria_label.jpg" 
-                            alt="Image d'illustration montrant une loupe
-                            zoomant sur un écran d'ordinateur montrant une balise aria dans du code HTML">
-                        <div class="card-footer bg-light text-dark fs-6 fst-italic">
+                            alt="Image d'illustration montrant du code HTML avec des balise ARIA"
+                            longdesc="#img-longdesc" 
+                        >
+                        <div id="img-longdesc" class="card-footer bg-light text-dark fs-6 fst-italic">
                             Image d'illustration : une loupe zoome sur un écran d'ordinateur montrant une balise aria 
                             dans du code HTML
                             <br>
@@ -95,7 +97,7 @@
                     <section class="mt-5 mb-5" id="commentaires" aria-labelledby="title-comments">
                         <span id="title-comments" class="visually-hidden">Section commentaire</span>
 
-                        <h3 class="fw-bold mb-4 border-bottom border-dark pb-2">Commentaires (2)</h3>
+                        <h2 class="h3 fw-bold mb-4 border-bottom border-dark pb-2">Commentaires (2)</h2>
 
                         <form class="card mb-4 shadow-sm border-0 bg-light" action="article2.html" method="GET">
                             <div class="card-body">
