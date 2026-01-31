@@ -85,37 +85,38 @@
                         <!-- Tableau -->
                         <div class="table-responsive">
                             <table class="table table-hover mb-0">
+                                <caption class="visually-hidden">Comparatif des perceptions visuelles</caption>
                                 <!-- Colonnes -->
                                 <thead class="table-light">
                                     <tr>
-                                        <th>Stimulus Visuel</th>
-                                        <th>Interprétation "Normale" (Conditionnée)</th>
-                                        <th>Perception "Daltonienne" (Réelle)</th>
-                                        <th>Objectif du Diagnostic</th>
+                                        <th scope="col">Stimulus Visuel</th>
+                                        <th scope="col">Interprétation "Normale" (Conditionnée)</th>
+                                        <th scope="col">Perception "Daltonienne" (Réelle)</th>
+                                        <th scope="col">Objectif du Diagnostic</th>
                                     </tr>
                                 </thead>
                                 <!-- Body du tableau (contiens les table-row) -->
                                 <tbody>
                                     <tr>
-                                        <td class="fw-bold">Plaque Ishihara 38</td>
+                                        <th class="fw-bold" scope="row">Plaque Ishihara 38</th>
                                         <td>Chiffre "74"</td>
                                         <td>Chaos de points gris (La vérité)</td>
                                         <td>Tester la suggestibilité</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold">Feu Rouge</td>
+                                        <th class="fw-bold" scope="row">Feu Rouge</th>
                                         <td>Signal d'arrêt / Danger</td>
                                         <td>Fréquence ~400THz (Neutre)</td>
                                         <td>Contrôle comportemental</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold">Verdure</td>
+                                        <th class="fw-bold" scope="row">Verdure</th>
                                         <td>Nature / Apaisement</td>
                                         <td>Fréquence ~550THz (Neutre)</td>
                                         <td>Sédatif psychologique</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold">Spectre Total</td>
+                                        <th class="fw-bold" scope="row">Spectre Total</th>
                                         <td>3 couleurs primaires</td>
                                         <td>443</td>
                                         <td>Simplification pour le consommateur</td>
@@ -123,8 +124,11 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="card-footer bg-light text-dark fs-6 fst-italic">
-                            Données extraites des rapports dissidents de l'Institut de la Vision Libre (2025).
+                        <div class="card-footer bg-light text-dark fs-6 fst-italic" role="note">
+                            <small class="mb-0">
+                                <span class="visually-hidden">Source du tableau: </span>
+                                Données extraites des rapports dissidents de l'Institut de la Vision Libre (2025).
+                            </small>
                         </div>
                     </div>
 
