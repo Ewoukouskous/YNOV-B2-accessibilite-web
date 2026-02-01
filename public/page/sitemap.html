@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complot Accessible - Plan du site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        /* Liens d'accès rapide pour l'accessibilité */
+        .skip-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            padding: 10px 20px;
+            background-color: #212529;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 5px 5px;
+            z-index: 10000;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+            top: 10px;
+            outline: 3px solid #ffc107;
+            outline-offset: 2px;
+        }
+
+        :focus {
+            outline: none;
+        }
+        :focus-visible {
+            outline: 2px solid #bb2d3b !important;
+            outline-offset: 2px;
+        }
+
+        .sitemap-section h2 {
+            border-bottom: 2px solid #bb2d3b;
+        }
+
+        .article-item a {
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Menu d'accès rapide pour l'accessibilité -->
+<nav class="skip-links" aria-label="Menu d'accès rapide">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#navbarNav" class="skip-link">Aller à la navigation</a>
+</nav>
+
+<header>
+    <div class="navbar navbar-expand-lg text-bg-dark p-3 rounded-bottom-3 overflow-hidden fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <!--Partie "Branding", affichage du logo et du nom du site-->
+            <a class="navbar-brand ms-3 d-flex align-items-center" href="../../index.html" title="Aller à la page d'accueil">
+                <img class="me-3" src="../../logo.png" aria-hidden="true" height="40" alt="">
+                <h1 class="fs-3 mb-0">Complot Accessible</h1>
+            </a>
+
+            <!--Bouton Hamburger pour les petits écrans-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    title="Bouton hamburger, ouvrir le menu de navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+
+            <!-- Liens de navigation (contenu) -->
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white link-danger" href="../../index.html" title="Aller à la page d'accueil" aria-label="Aller à la page d'accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white link-danger" href="login_page.html" title="Aller à la page de connexion" aria-label="Aller à la page de connexion">Connexion</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="mt-auto mx-3" tabindex="-1" id="main-content">
+<div class="container-fluid" style="margin-top: 15vh; margin-bottom: 10vh;">
+    <div class="row justify-content-center">
+        <section class="col-12 col-lg-11 col-xl-10">
+
+            <h2 class="card-title text-dark fw-bold pb-3">Plan du site</h2>
+            <p class="text-muted mb-4">Cette page vous permet de naviguer rapidement vers l'ensemble des pages et contenus du site.</p>
+
+            <!-- Navigation Principale -->
+            <div class="sitemap-section mb-5">
+                <h2 class="h4 text-dark fw-bold pb-2">Navigation Principale</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="../../index.html" class="link-danger text-decoration-none">Accueil</a> - Page d'accueil avec tous les articles publiés</li>
+                    <li class="mb-2"><a href="login_page.html" class="link-danger text-decoration-none">Connexion Administrateur</a> - Accès à l'espace d'administration</li>
+                    <li class="mb-2"><a href="sitemap.html" class="link-danger text-decoration-none">Plan du site</a> - Cette page</li>
+                </ul>
+            </div>
+
+            <!-- Articles -->
+            <div class="sitemap-section">
+                <h2 class="h4 text-dark fw-bold pb-2">Articles</h2>
+                <p class="text-muted mb-3">Tous nos articles et leurs commentaires associés :</p>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark h-100">
+                            <div class="card-body">
+                                <h3 class="card-title fs-6"><a href="article1.html" class="link-danger text-decoration-none">Le "Daltonisme" : Une pathologisation par l'industrie optico-medicale</a></h3>
+                                <p class="card-text small text-muted mb-2">Publié le 28 janvier 2026</p>
+                                <a href="article1.html#commentaires" class="link-danger text-decoration-none">Voir les 3 commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark h-100">
+                            <div class="card-body">
+                                <h3 class="card-title fs-6"><a href="article2.html" class="link-danger text-decoration-none">Les lecteurs d'écran ne lisent pas, ils transmettent vos pensées à la NSA</a></h3>
+                                <p class="card-text small text-muted mb-2">Publié le 25 janvier 2026</p>
+                                <a href="article2.html#commentaires" class="link-danger text-decoration-none">Voir les 2 commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark h-100">
+                            <div class="card-body">
+                                <h3 class="card-title fs-6"><a href="article3.html" class="link-danger text-decoration-none">Les pigeons : Des drones de surveillance à rechargement inductif</a></h3>
+                                <p class="card-text small text-muted mb-2">Publié le 22 janvier 2026</p>
+                                <a href="article3.html#commentaires" class="link-danger text-decoration-none">Voir les 3 commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark h-100">
+                            <div class="card-body">
+                                <h3 class="card-title fs-6"><a href="article4.html" class="link-danger text-decoration-none">L'Australie : Le mythe de la "Terre du Bas" et le danger de la chute</a></h3>
+                                <p class="card-text small text-muted mb-2">Publié le 20 janvier 2026</p>
+                                <a href="article4.html#commentaires" class="link-danger text-decoration-none">Voir les 3 commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark h-100">
+                            <div class="card-body">
+                                <h3 class="card-title fs-6"><a href="article5.html" class="link-danger text-decoration-none">Le Sommeil : Un couvre-feu imposé pour empêcher l'émergence de Batman</a></h3>
+                                <p class="card-text small text-muted mb-2">Publié le 18 janvier 2026</p>
+                                <a href="article5.html#commentaires" class="link-danger text-decoration-none">Voir les 3 commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark h-100">
+                            <div class="card-body">
+                                <h3 class="card-title fs-6"><a href="article6.html" class="link-danger text-decoration-none">TDAH et Autisme : Les nouveaux processeurs quantiques de l'Humanité</a></h3>
+                                <p class="card-text small text-muted mb-2">Publié le 15 janvier 2026</p>
+                                <a href="article6.html#commentaires" class="link-danger text-decoration-none">Voir les 3 commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+</main>
+
+<footer class="mt-auto">
+    <div class="container-fluid text-center text-bg-dark p-3 mt-5 rounded-top-3 overflow-hidden fixed-bottom">
+        <p class="mb-0">&copy; 2026 Complot Accessible</p>
+        <p class="mb-0"><a href="sitemap.html" class="link-light" title="Consulter le plan du site">Plan du site</a></p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
