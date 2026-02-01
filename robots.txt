@@ -1,0 +1,9 @@
+# robots.txt - Instructions for indexes robots (SEO)
+# Complot Accessible - https://complot-accessible.fr/
+
+# Allow every robots on the website
+User-agent: *
+Disallow:
+
+# Sitemap.xml reference
+Sitemap: https://complot-accessible.fr/sitemap.xml

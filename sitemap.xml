@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://complot-accessible.fr/</loc>
+        <lastmod>2026-02-01</lastmod>
+    </url>
+    
+    <!-- Plan du site -->
+    <url>
+        <loc>https://complot-accessible.fr/public/page/sitemap.html</loc>
+        <lastmod>2026-02-01</lastmod>
+    </url>
+    
+    <!-- Page de connexion -->
+    <url>
+        <loc>https://complot-accessible.fr/public/page/login_page.html</loc>
+        <lastmod>2026-01-28</lastmod>
+    </url>
+    
+    <!-- Articles -->
+    <url>
+        <loc>https://complot-accessible.fr/public/page/article1.html</loc>
+        <lastmod>2026-01-28</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://complot-accessible.fr/public/page/article2.html</loc>
+        <lastmod>2026-01-25</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://complot-accessible.fr/public/page/article3.html</loc>
+        <lastmod>2026-01-22</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://complot-accessible.fr/public/page/article4.html</loc>
+        <lastmod>2026-01-20</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://complot-accessible.fr/public/page/article5.html</loc>
+        <lastmod>2026-01-18</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://complot-accessible.fr/public/page/article6.html</loc>
+        <lastmod>2026-01-15</lastmod>
+    </url>
+</urlset>
