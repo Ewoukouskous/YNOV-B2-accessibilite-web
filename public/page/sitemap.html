@@ -7,60 +7,14 @@
     <title>Complot Accessible - Plan du site</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <style>
-        /* Liens d'accès rapide pour l'accessibilité */
-        .skip-links {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999;
-        }
-
-        .skip-link {
-            position: absolute;
-            left: -9999px;
-            top: 0;
-            padding: 10px 20px;
-            background-color: #212529;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 0 0 5px 5px;
-            z-index: 10000;
-        }
-
-        .skip-link:focus {
-            left: 10px;
-            top: 10px;
-            outline: 3px solid #ffc107;
-            outline-offset: 2px;
-        }
-
-        :focus {
-            outline: none;
-        }
-        :focus-visible {
-            outline: 2px solid #bb2d3b !important;
-            outline-offset: 2px;
-        }
-
-        .sitemap-section h2 {
-            border-bottom: 2px solid #bb2d3b;
-        }
-
-        .article-item a {
-            font-weight: 500;
-        }
-    </style>
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
 <!-- Menu d'accès rapide pour l'accessibilité -->
 <nav class="skip-links" aria-label="Menu d'accès rapide">
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-    <a href="#navbarNav" class="skip-link">Aller à la navigation</a>
+    <a href="#main-content" class="skip-link">Contenu</a>
 </nav>
 
 <header>
